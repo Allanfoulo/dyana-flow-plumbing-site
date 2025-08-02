@@ -3,7 +3,7 @@ import { Phone } from "lucide-react";
 import { useTheme } from "@/components/theme-provider";
 import heroBackground from "@/assets/hero-background.jpg";
 import heroBackgroundLight from "@/assets/hero-background-light.jpg";
-import dynaFlowLogo from "@/assets/dyana-flow-logo.png";
+// import dynaFlowLogo from "@/assets/dyana-flow-logo.png";
 
 const Hero = () => {
   const { theme } = useTheme();
@@ -49,7 +49,7 @@ const Hero = () => {
         {/* Logo */}
         <div className="mb-8">
           <img 
-            src={dynaFlowLogo} 
+            src="/assets/dyana logo.png" 
             alt="Dyana Flow Plumbing Logo" 
             className="h-24 md:h-32 mx-auto mb-6"
           />

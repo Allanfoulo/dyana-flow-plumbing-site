@@ -9,7 +9,7 @@ import {
   Monitor
 } from "lucide-react";
 import { useTheme } from "@/components/theme-provider";
-import dynaFlowLogo from "@/assets/dyana-flow-logo.png";
+// import dynaFlowLogo from "@/assets/dyana-flow-logo.png";
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -56,7 +56,7 @@ const Navigation = () => {
           {/* Logo */}
           <div className="flex items-center space-x-3">
             <img 
-              src={dynaFlowLogo} 
+              src="/assets/dyana logo.png" 
               alt="Dyana Flow Logo" 
               className="h-8 md:h-10 w-auto"
             />

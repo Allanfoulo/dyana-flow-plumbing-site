@@ -85,13 +85,13 @@ const Contact = () => {
         {/* Emergency Call to Action */}
         <div className="text-center">
           <Card className="bg-primary/5 border-primary/20 inline-block">
-            <CardContent className="p-8">
-              <div className="flex items-center justify-center mb-4">
-                <div className="p-3 bg-primary/20 rounded-full mr-4">
+            <CardContent className="p-4 sm:p-8">
+              <div className="flex flex-col sm:flex-row items-center justify-center mb-4 gap-4 sm:gap-0">
+                <div className="p-3 bg-primary/20 rounded-full sm:mr-4">
                   <Phone className="h-6 w-6 text-primary" />
                 </div>
-                <div className="text-left">
-                  <h3 className="text-2xl font-bold text-foreground">
+                <div className="text-center sm:text-left">
+                  <h3 className="text-xl sm:text-2xl font-bold text-foreground">
                     Emergency Plumbing?
                   </h3>
                   <p className="text-muted-foreground">
@@ -102,7 +102,7 @@ const Contact = () => {
               
               <Button 
                 size="lg" 
-                className="text-lg px-8 py-6 bg-primary hover:bg-primary/90 text-primary-foreground font-semibold shadow-premium"
+                className="text-sm sm:text-lg px-4 sm:px-8 py-4 sm:py-6 bg-primary hover:bg-primary/90 text-primary-foreground font-semibold shadow-premium w-full sm:w-auto"
                 asChild
               >
                 <a href="tel:0714421210">
