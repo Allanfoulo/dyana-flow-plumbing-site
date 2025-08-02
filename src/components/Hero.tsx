@@ -1,19 +1,48 @@
 import { Button } from "@/components/ui/button";
 import { Phone } from "lucide-react";
+import { useTheme } from "@/components/theme-provider";
 import heroBackground from "@/assets/hero-background.jpg";
+import heroBackgroundLight from "@/assets/hero-background-light.jpg";
 import dynaFlowLogo from "@/assets/dyana-flow-logo.png";
 
 const Hero = () => {
+  const { theme } = useTheme();
+  
+  // Determine which background to use based on theme
+  const getBackgroundImage = () => {
+    if (theme === 'light') {
+      return heroBackgroundLight;
+    } else if (theme === 'dark') {
+      return heroBackground;
+    } else {
+      // System theme - check actual preference
+      const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      return isDarkMode ? heroBackground : heroBackgroundLight;
+    }
+  };
+  
+  // Determine overlay opacity based on theme
+  const getOverlayClass = () => {
+    if (theme === 'light') {
+      return 'absolute inset-0 bg-white/40'; // Lighter overlay for light mode
+    } else if (theme === 'dark') {
+      return 'absolute inset-0 bg-black/70'; // Darker overlay for dark mode
+    } else {
+      // System theme
+      const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      return isDarkMode ? 'absolute inset-0 bg-black/70' : 'absolute inset-0 bg-white/40';
+    }
+  };
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
       {/* Background Image */}
       <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${heroBackground})` }}
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-all duration-500"
+        style={{ backgroundImage: `url(${getBackgroundImage()})` }}
       />
       
-      {/* Dark overlay for better text readability */}
-      <div className="absolute inset-0 bg-black/70" />
+      {/* Theme-aware overlay for better text readability */}
+      <div className={`${getOverlayClass()} transition-all duration-500`} />
       
       {/* Content */}
       <div className="relative z-10 text-center px-4 md:px-8 max-w-4xl mx-auto">
