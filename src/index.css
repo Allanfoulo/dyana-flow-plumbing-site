@@ -8,35 +8,42 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Dyana Flow Brand Colors - Black, Red, White */
+    --background: 0 0% 0%;           /* Pure black background */
+    --foreground: 0 0% 100%;         /* Pure white text */
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 0 0% 5%;                 /* Very dark grey for cards */
+    --card-foreground: 0 0% 100%;    /* White text on cards */
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 5%;
+    --popover-foreground: 0 0% 100%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 0 100% 50%;           /* Bold red primary */
+    --primary-foreground: 0 0% 100%; /* White text on red */
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 0 0% 10%;           /* Dark grey secondary */
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 0 0% 15%;               /* Muted dark grey */
+    --muted-foreground: 0 0% 70%;    /* Light grey text */
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 0 100% 50%;            /* Red accent */
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 0 0% 20%;              /* Dark borders */
+    --input: 0 0% 15%;               /* Dark input backgrounds */
+    --ring: 0 100% 50%;              /* Red focus rings */
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;               /* Slightly more rounded for premium feel */
+    
+    /* Premium gradients and effects */
+    --gradient-hero: linear-gradient(135deg, hsl(0 0% 0%) 0%, hsl(0 0% 5%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 3%) 0%, hsl(0 0% 8%) 100%);
+    --shadow-premium: 0 25px 50px -12px rgba(255, 0, 0, 0.15);
+    --shadow-card: 0 10px 30px -10px rgba(0, 0, 0, 0.3);
 
     --sidebar-background: 0 0% 98%;
 
