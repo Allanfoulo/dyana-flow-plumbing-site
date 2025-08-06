@@ -1,42 +1,40 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { 
-  Wrench, 
-  Droplets, 
-  Zap, 
-  Filter, 
-  Settings, 
-  AlertTriangle 
-} from "lucide-react";
+import geyserInstallation from "@/assets/geyser-installation.jpg";
+import blockedDrains from "@/assets/blocked-drains.jpg";
+import burstPipes from "@/assets/burst-pipes.jpg";
+import leakingTaps from "@/assets/leaking-taps.jpg";
+import waterFiltration from "@/assets/water-filtration.jpg";
+import generalPlumbing from "@/assets/general-plumbing.jpg";
 
 const services = [
   {
     title: "Geyser Installation",
-    icon: Zap,
+    image: geyserInstallation,
     description: "Professional geyser installation and replacement services with warranty coverage."
   },
   {
     title: "Blocked Drains",
-    icon: AlertTriangle,
+    image: blockedDrains,
     description: "Fast and effective drain cleaning and unblocking for all types of blockages."
   },
   {
     title: "Burst Pipes",
-    icon: Droplets,
+    image: burstPipes,
     description: "Emergency burst pipe repairs and replacements to prevent water damage."
   },
   {
     title: "Leaking Taps",
-    icon: Wrench,
+    image: leakingTaps,
     description: "Quick tap repairs and replacements to stop annoying drips and water waste."
   },
   {
     title: "Water Filtration System Installation",
-    icon: Filter,
+    image: waterFiltration,
     description: "Clean, safe drinking water with professional filtration system installation."
   },
   {
     title: "General Plumbing",
-    icon: Settings,
+    image: generalPlumbing,
     description: "Complete plumbing maintenance, repairs, and installation services."
   }
 ];
@@ -59,30 +57,34 @@ const Services = () => {
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => {
-            const IconComponent = service.icon;
-            
             return (
               <Card 
                 key={index} 
-                className="bg-gradient-card border-border hover:border-primary/50 transition-all duration-300 hover:shadow-card group"
+                className="bg-gradient-card border-border hover:border-primary/50 transition-all duration-300 hover:shadow-card group overflow-hidden"
               >
-                <CardContent className="p-8 text-center">
-                  {/* Service Icon */}
-                  <div className="mb-6 flex justify-center">
-                    <div className="p-4 bg-primary/10 rounded-full group-hover:bg-primary/20 transition-colors duration-300">
-                      <IconComponent className="h-8 w-8 text-primary" />
-                    </div>
+                <CardContent className="p-0">
+                  {/* Service Image */}
+                  <div className="relative overflow-hidden">
+                    <img 
+                      src={service.image} 
+                      alt={service.title}
+                      className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-300"></div>
                   </div>
                   
-                  {/* Service Title */}
-                  <h3 className="text-xl font-semibold text-foreground mb-4 group-hover:text-primary transition-colors duration-300">
-                    {service.title}
-                  </h3>
-                  
-                  {/* Service Description */}
-                  <p className="text-muted-foreground leading-relaxed">
-                    {service.description}
-                  </p>
+                  {/* Service Content */}
+                  <div className="p-6 text-center">
+                    {/* Service Title */}
+                    <h3 className="text-xl font-semibold text-foreground mb-3 group-hover:text-primary transition-colors duration-300">
+                      {service.title}
+                    </h3>
+                    
+                    {/* Service Description */}
+                    <p className="text-muted-foreground leading-relaxed">
+                      {service.description}
+                    </p>
+                  </div>
                 </CardContent>
               </Card>
             );
