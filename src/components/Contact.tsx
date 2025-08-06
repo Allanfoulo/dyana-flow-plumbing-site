@@ -16,13 +16,6 @@ const contactInfo = [
     value: "dynaflow30@gmail.com",
     href: "mailto:dynaflow30@gmail.com",
     description: "Send us your questions and requests"
-  },
-  {
-    icon: Globe,
-    title: "Website",
-    value: "www.dynaflowplumbing.co.za",
-    href: "https://www.dynaflowplumbing.co.za",
-    description: "Visit our website for more information"
   }
 ];
 
