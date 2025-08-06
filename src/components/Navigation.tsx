@@ -57,12 +57,12 @@ const Navigation = () => {
           <div className="flex items-center space-x-3">
             <img 
               src="/assets/dyana logo.png" 
-              alt="Dyana Flow Logo" 
+              alt="Dyna Flow Logo" 
               className="h-8 md:h-10 w-auto"
             />
             <div className="hidden sm:block">
               <span className="text-lg md:text-xl font-bold text-foreground">
-                DYANA FLOW
+                DYNA FLOW
               </span>
               <span className="text-lg md:text-xl font-bold text-primary ml-1">
                 PLUMBING
