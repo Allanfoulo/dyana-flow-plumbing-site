@@ -1,18 +1,19 @@
 import Navigation from "@/components/Navigation";
-import Hero from "@/components/Hero";
-import Services from "@/components/Services";
 import About from "@/components/About";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
-const Index = () => {
+const AboutPage = () => {
   return (
     <div className="min-h-screen bg-background font-inter">
       <Navigation />
-      <Hero />
+      <div className="pt-16 md:pt-20">
+        <About />
+        <Contact />
+      </div>
       <Footer />
     </div>
   );
 };
 
-export default Index;
+export default AboutPage;

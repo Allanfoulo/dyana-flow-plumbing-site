@@ -9,25 +9,22 @@ import {
   Monitor
 } from "lucide-react";
 import { useTheme } from "@/components/theme-provider";
+import { Link, useNavigate } from "react-router-dom";
 // import dynaFlowLogo from "@/assets/dyana-flow-logo.png";
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { theme, setTheme } = useTheme();
+  const navigate = useNavigate();
 
   const navItems = [
-    { href: "#services", label: "Services" },
-    { href: "#about", label: "About" },
-    { href: "#contact", label: "Contact" },
+    { href: "/services", label: "Services" },
+    { href: "/about", label: "About" },
+    { href: "/contact", label: "Contact" },
   ];
 
-  const scrollToSection = (href: string) => {
-    if (href.startsWith('#')) {
-      const element = document.querySelector(href);
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
-      }
-    }
+  const handleNavigation = (href: string) => {
+    navigate(href);
     setIsMenuOpen(false);
   };
 
@@ -54,7 +51,7 @@ const Navigation = () => {
       <div className="max-w-6xl mx-auto px-4 md:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <div className="flex items-center space-x-3">
+          <Link to="/" className="flex items-center space-x-3 hover:opacity-80 transition-opacity">
             <img 
               src="/assets/dyana logo.png" 
               alt="Dyna Flow Logo" 
@@ -68,14 +65,14 @@ const Navigation = () => {
                 PLUMBING
               </span>
             </div>
-          </div>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
               <button
                 key={item.href}
-                onClick={() => scrollToSection(item.href)}
+                onClick={() => handleNavigation(item.href)}
                 className="text-foreground hover:text-primary transition-colors duration-300 font-medium"
               >
                 {item.label}
@@ -150,7 +147,7 @@ const Navigation = () => {
               {navItems.map((item) => (
                 <button
                   key={item.href}
-                  onClick={() => scrollToSection(item.href)}
+                  onClick={() => handleNavigation(item.href)}
                   className="text-left text-foreground hover:text-primary transition-colors duration-300 font-medium py-2"
                 >
                   {item.label}
