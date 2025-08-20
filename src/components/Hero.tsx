@@ -69,7 +69,7 @@ const Hero = () => {
         {/* Subtitle */}
         <p className="text-lg md:text-xl text-foreground/90 mb-12 max-w-2xl mx-auto leading-relaxed">
           Professional plumbing solutions for homeowners, property managers, and businesses. 
-          Fast, reliable, and trustworthy service when you need it most.
+          Fast, reliable, and trustworthy service within your budget.
         </p>
         
         {/* CTA Buttons */}

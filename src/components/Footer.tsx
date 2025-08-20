@@ -1,4 +1,4 @@
-import { Phone, Mail, Globe } from "lucide-react";
+import { Phone, Mail, Globe, MessageCircle } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -8,7 +8,7 @@ const Footer = () => {
           {/* Company Info */}
           <div>
             <h3 className="text-2xl font-bold text-foreground mb-4">
-              DYANA FLOW <span className="text-primary">PLUMBING</span>
+              DYNA FLOW <span className="text-primary">PLUMBING</span>
             </h3>
             <p className="text-muted-foreground mb-4">
               Dynamic Services
@@ -26,11 +26,11 @@ const Footer = () => {
             </h4>
             <div className="space-y-3">
               <a 
-                href="tel:0714421210"
+                href="https://wa.me/27714421210"
                 className="flex items-center justify-center md:justify-start text-primary hover:text-primary/80 transition-colors duration-300"
               >
-                <Phone className="h-4 w-4 mr-2" />
-                071 442 1210
+                <MessageCircle className="h-4 w-4 mr-2" />
+                WhatsApp: 071 442 1210
               </a>
               <a 
                 href="mailto:dynaflow30@gmail.com"
@@ -68,7 +68,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-border mt-8 pt-8 text-center">
           <p className="text-muted-foreground text-sm">
-            © 2024 Dyana Flow Plumbing. All rights reserved. | Professional plumbing services you can trust.
+            © 2024 Dyna Flow Plumbing. All rights reserved. | Professional plumbing services you can trust.
           </p>
         </div>
       </div>
