@@ -33,11 +33,11 @@ const Footer = () => {
                 WhatsApp: 071 442 1210
               </a>
               <a 
-                href="mailto:dynaflow30@gmail.com"
+                href="mailto:info@dynaflowplumbing.co.za"
                 className="flex items-center justify-center md:justify-start text-primary hover:text-primary/80 transition-colors duration-300"
               >
                 <Mail className="h-4 w-4 mr-2" />
-                dynaflow30@gmail.com
+                info@dynaflowplumbing.co.za
               </a>
               <a 
                 href="https://www.dynaflowplumbing.co.za"
@@ -60,6 +60,7 @@ const Footer = () => {
               <li>Burst Pipes</li>
               <li>Leaking Taps</li>
               <li>Water Filtration Systems</li>
+              <li>Water storage (jojo tanks)</li>
               <li>General Plumbing</li>
             </ul>
           </div>
